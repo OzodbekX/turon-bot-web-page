@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+  
+
+    <!-- Home Section -->
+    <section id="home" class="section home">
+        <div class="header">
+            <nav>
+                <ul>
+                    <li><a href="#home" class="nav-link" data-section="home">Главная страница</a></li>
+                    <li><a href="#tariffs" class="nav-link" data-section="tariffs">Тарифы</a></li>
+                    <li><a href="#cinerama" class="nav-link" data-section="cinerama">Cinerama</a></li>
+                    <li><a href="#connect" class="nav-link" data-section="connect">Подключить</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="banner">
+            <h1>145,000 сум в месяц</h1>
+            <p>За 145,000 сум в месяц вы получаете: Роутер, 100 Мбит/с, Cinerama</p>
+        </div>
+    </section>
+
+    <!-- Tariffs Section -->
+    <section id="tariffs" class="section">
+        <h2>Тарифы</h2>
+        <div class="tariff-card">
+            <h3>Tezkor</h3>
+            <p>185,000 сум</p>
+            <button class="connect-btn">Подключить</button>
+        </div>
+        <div class="tariff-card">
+            <h3>Barqaror</h3>
+            <p>125,000 сум</p>
+            <button class="connect-btn">Подключить</button>
+        </div>
+        <div class="tariff-card">
+            <h3>Cheksiz</h3>
+            <p>200,000 сум</p>
+            <button class="connect-btn">Подключить</button>
+        </div>
+    </section>
+
+    <!-- Cinerama Section -->
+    <section id="cinerama" class="section">
+        <h2>Cinerama</h2>
+        <p>Cinerama.uz - онлайн-платформа для просмотра фильмов...</p>
+    </section>
+
+    <!-- Connect Section -->
+    <section id="connect" class="section">
+        <h2>Подключить</h2>
+        <form id="connect-form">
+            <input type="text" placeholder="Ф.И.О." required>
+            <input type="tel" placeholder="Номер" required>
+            <select required>
+                <option value="">Выберите тариф</option>
+                <option value="tezkor">Tezkor</option>
+                <option value="barqaror">Barqaror</option>
+                <option value="cheksiz">Cheksiz</option>
+            </select>
+            <button type="submit" class="submit-btn">Оставить заявку</button>
+        </form>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
