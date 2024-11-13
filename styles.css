@@ -8,9 +8,12 @@ body {
     font-family: Arial, sans-serif;
 }
 
-header {
-    background-color: #0033a0;
+.header {
     padding: 20px;
+    display: flex;
+    margin: 0 250px;
+    justify-content: space-between;
+    align-items: center;
 }
 
 
@@ -28,6 +31,26 @@ nav a {
     color: white;
     text-decoration: none;
     font-size: 18px;
+}
+nav a.active {
+    color: #0033a0;  /* Text color when selected */
+    background-color: white; /* Background color when selected */
+    padding: 10px 16px;
+    border-radius: 20px;
+}
+.main-page-banner{
+    margin-top: 90px;
+    max-width: 900px;
+}
+.offer-list{
+    background-color: rgba(255, 255, 255, 0.5); /* White with 50% opacity */
+    border-radius: 12px;
+    justify-content: center;
+    gap:12px;
+    padding: 0 16px;
+    display: flex;
+    width: fit-content;
+    margin: 16px auto;
 }
 
 section {
