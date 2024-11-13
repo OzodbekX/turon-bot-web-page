@@ -14,7 +14,16 @@ document.querySelectorAll('.nav-link').forEach(link => {
         link.classList.add('active');
     });
 });
-
+function scrollToNext() {
+    // Get the first section height to scroll to the next section
+    const firstSectionHeight = document.querySelector('#tariffs').clientHeight;
+    
+    // Scroll to the next section
+    window.scrollTo({
+        top: firstSectionHeight,
+        behavior: 'smooth' // Smooth scrolling
+    });
+}
 // Log message for each "Подключить" button in the tariffs section
 document.querySelectorAll('.connect-btn').forEach(button => {
     button.addEventListener('click', () => {
@@ -27,6 +36,7 @@ document.getElementById('connect-form').addEventListener('submit', (e) => {
     e.preventDefault();
     console.log('Form submitted');
 });
+
 
 // // Optional: Automatically update the active link when scrolling through sections
 // window.addEventListener('scroll', () => {

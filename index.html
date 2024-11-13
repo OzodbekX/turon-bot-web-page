@@ -1,65 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing Page</title>
     <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="tariffs.css"> <!-- Ensure CSS file is linked here as well -->
+    <link rel="stylesheet" href="tariffs.html"> <!-- Ensure CSS file is linked here as well -->
+
+    <link rel="stylesheet" href="cinerama.css"> <!-- Ensure CSS file is linked here as well -->
+    <link rel="stylesheet" href="cinerama.html"> <!-- Ensure CSS file is linked here as well -->
+
 </head>
+
 <body>
-    <!-- Navigation -->
-  
+  <div class="root">
+      <!-- Navigation -->
+
 
     <!-- Home Section -->
     <section id="home" class="section home">
-        <div class="header">
-            <div>Ru</div>  
-            <nav>
-                <ul>
-                    <li><a href="#home" class="nav-link" data-section="home">Главная страница</a></li>
-                    <li><a href="#tariffs" class="nav-link" data-section="tariffs">Тарифы</a></li>
-                    <li><a href="#cinerama" class="nav-link" data-section="cinerama">Cinerama</a></li>
-                    <li><a href="#connect" class="nav-link" data-section="connect">Подключить</a></li>
-                </ul>
-            </nav>
-            <div>Turon icon</div>  
-        </div>
-        <div class="banner">
-            <img class="main-page-banner" src="./images/1.png" alt="">
-            <h1>За 145 000 сум в месяц вы получаете:</h1>
-            <div class="offer-list">
-                <div>Роутер</div>
-                <div>100 МБит/с</div>
-                <div>Cinerama</div>
+        <div class="container">
+            <div class="header">
+                <div style="background-color: white; padding: 16px; border-radius: 50%;">Ru</div>
+                <nav>
+                    <ul>
+                        <li class="nav-link" data-section="home"><a href="#home" >Главная страница</a></li>
+                        <li class="nav-link" data-section="tariffs"><a href="#tariffs" >Тарифы</a></li>
+                        <li  class="nav-link" data-section="cinerama"><a href="#cinerama">Cinerama</a></li>
+                        <li class="nav-link" data-section="connect"><a href="#connect" >Подключить</a></li>
+                    </ul>
+                </nav>
+                <img height="100" src="./images/image-removebg-preview.png" />
             </div>
-        </div>
+            <div class="banner">
+                <img class="main-page-banner" src="./images/1.png" alt="">
+                <div style="color: white;font-size: 24px;">За 145 000 сум в месяц вы получаете:</h1>
+                    <div class="offer-list">
+                        <div style="padding: 8px;color: white;">Роутер</div>
+                        <div style="padding: 8px 12px; background-color: white;color: black; border-radius: 24px;">100
+                            МБит/с</div>
+                        <div style="padding: 8px; color:white">Cinerama</div>
+                    </div>
+                    <img onclick="scrollToNext()" style="cursor: pointer;"
+                        src="./images/fluent--chevron-down-24-regular.png" alt="">
+
+                </div>
+            </div>
     </section>
 
     <!-- Tariffs Section -->
     <section id="tariffs" class="section">
-        <h2>Тарифы</h2>
-        <div class="tariff-card">
-            <h3>Tezkor</h3>
-            <p>185,000 сум</p>
-            <button class="connect-btn">Подключить</button>
-        </div>
-        <div class="tariff-card">
-            <h3>Barqaror</h3>
-            <p>125,000 сум</p>
-            <button class="connect-btn">Подключить</button>
-        </div>
-        <div class="tariff-card">
-            <h3>Cheksiz</h3>
-            <p>200,000 сум</p>
-            <button class="connect-btn">Подключить</button>
+        <div class="container">
+            <iframe src="tariffs.html" width="100%" height="100%" style="border: none;"></iframe>
         </div>
     </section>
 
     <!-- Cinerama Section -->
     <section id="cinerama" class="section">
-        <h2>Cinerama</h2>
-        <p>Cinerama.uz - онлайн-платформа для просмотра фильмов...</p>
-    </section>
+        <div class="container">
+            <iframe src="cinerama.html" width="100%" height="100%" style="border: none;"></iframe>
+        </div>    </section>
 
     <!-- Connect Section -->
     <section id="connect" class="section">
@@ -77,6 +79,11 @@
         </form>
     </section>
 
+  </div>
     <script src="script.js"></script>
+    <script>fetch('tariffs.html').then(response => response.text()).then(html => {
+            document.getElementById('tariff-cards-placeholder').innerHTML = html;
+        })</script>
 </body>
+
 </html>
