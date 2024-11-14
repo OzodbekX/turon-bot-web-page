@@ -57,8 +57,7 @@ const translations = {
         "langCode": "Ру",
         "router": "Router",
         "number": "Nomer",
-        "fromTillDevice": "до 11-12 устройств",
-
+        "fromTillDevice": "11-12 ta qurilmagacha",
         "fio": "F.I.Sh",
         "siteOffer": "Sayt kontentni reklamasiz, shuningdek, onlayn televideniyeni qulay ko'rish uchun obunani taklif qiladi.",
         "100mbit": "100 MBit/s",
