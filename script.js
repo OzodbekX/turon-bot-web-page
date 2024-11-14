@@ -24,6 +24,16 @@ function scrollToNext() {
         behavior: 'smooth' // Smooth scrolling
     });
 }
+function goToConnect() {
+    // Get the first section height to scroll to the next section
+    const firstSectionHeight = document.getElementById('connect');
+    
+    // Scroll to the next section
+    firstSectionHeight.scrollIntoView({
+        block: 'start',
+        behavior: 'smooth' // Smooth scrolling
+    });
+}
 // Log message for each "Подключить" button in the tariffs section
 document.querySelectorAll('.connect-btn').forEach(button => {
     button.addEventListener('click', () => {

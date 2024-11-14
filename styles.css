@@ -88,14 +88,17 @@ a{
 
 
 section {
-    padding: 20px;
     text-align: center;
     height: 100vh;
 
 }
 
-.home {
+.section.home {
     background-color: #254287;
+}
+
+.section.cinerama {
+    background-color: black;
 }
 
 
@@ -115,17 +118,73 @@ button:hover {
 
 .container {
     width: 100%;
-    /* Full width of the viewport */
     max-width: 1410px;
-    /* Maximum width of 1920px */
     min-width: 510px;
     /* Minimum width of 510px */
     margin: 0 auto;
-    /* Center the container */
     box-sizing: border-box;
     /* Ensures padding doesn't affect width */
     display: flex;
     flex-direction: column;
     height: 100%;
     position: relative;
+}
+.connect-part{
+    background-color: #3051a0;
+    height: 200px;
+    width: 100%;
+
+}
+.connect-part .container{
+   flex-direction: row;
+   color: white;
+   align-items: center;
+   justify-content: center;
+   gap:40px;
+
+
+}
+.connect-part button{
+    background-color: white;
+    height: min-content;
+    padding: 16px 24px;
+    border-radius: 24px;
+    color: black;
+
+}
+
+
+ .footer {
+    width: 100%;
+    background-color: #3051a0;
+    margin-top: 20px;
+}
+.footer .container{
+    display: flex;
+    justify-content: space-between;
+    height: 200px;
+    flex-direction: row;
+    align-items: center;
+}
+.flex{
+display: flex;
+gap: 24px;
+}
+ .footer .footer-button {
+    background-color: white;
+    border: 1px solid #ddd;
+    color: black;
+    padding: 8px 20px;
+    font-size: 0.9em;
+    border-radius: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+ .footer .footer-button:hover {
+    background-color: #eee;
+}
+
+ .footer .logo {
+    height: 80px;
 }
