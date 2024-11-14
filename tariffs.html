@@ -21,11 +21,11 @@
                 <div class="label" data-i18n="price">Стоимость</div>
             </div>
             <div class="stat-item">
-                <div class="number" data-i18n="40mbit">40 Мбит/с</div>
+                <div class="number" data-i18n="mbitPerS" data-i18n-options='{"number":"40"}'>40 Мбит/с</div>
                 <div class="label" data-i18n="day_speed">Дневная скорость</div>
             </div>
             <div class="stat-item">
-                <div class="number" data-i18n="100mbit">100 Мбит/с</div>
+                <div class="number" data-i18n="mbitPerS" data-i18n-options='{"number":"100"}'>100 Мбит/с</div>
                 <div class="label" data-i18n="night_speed">Ночная скорость</div>
             </div>
         </div>
@@ -40,15 +40,16 @@
                     <div class="icon-text-group">
                         <img src="images/oi--moon.png" class="moon" alt="Night Icon">
                         <span style="color: rgb(148, 147, 147); font-size: 16px; font-weight: 600;">00:00-12:00</span>
-                        <span class="speed" data-i18n="100mbit">100 Мбит/с</span>
+                        <span class="speed"data-i18n="mbitPerS" data-i18n-options='{"number":"100"}'>100 Мбит/с</span>
                     </div>
                     <div class="icon-text-group">
                         <img src="images/sun.png" class="sun" alt="Night Icon">
                         <span style="color: rgb(148, 147, 147); font-size: 16px; font-weight: 600;">00:00-12:00</span>
-                        <span class="speed" data-i18n="80mbit">80 Мбит/с</span>
+                        <span class="speed" data-i18n="mbitPerS" data-i18n-options='{"number":"80"}'>80 Мбит/с</span>
                     </div>
                 </div>
-                <small style="color: rgb(148, 147, 147); font-size: 16px; font-weight: 500;" data-i18n="fromTillDevice">до 11-12 устройств</small>
+                <small style="color: rgb(148, 147, 147); font-size: 16px; font-weight: 500;"
+                    data-i18n="fromTillDevice" data-i18n="devicesCount" data-i18n-options='{"number":"11-12"}'>до 11-12 устройств</small>
                 <div class="price">185 000 сум</div>
                 <button class="connect-button" data-i18n="connect">Подключить</button>
             </div>
@@ -62,15 +63,15 @@
                     <div class="icon-text-group">
                         <img src="images/oi--moon.png" class="moon" alt="Night Icon">
                         <span style="color: rgb(148, 147, 147); font-size: 16px; font-weight: 600;">00:00-12:00</span>
-                        <span class="speed" data-i18n="100mbit">100 Мбит/с</span>
+                        <span class="speed" data-i18n="mbitPerS" data-i18n-options='{"number":"100"}'>100 Мбит/с</span>
                     </div>
                     <div class="icon-text-group">
                         <img src="images/sun.png" class="sun" alt="Night Icon">
                         <span style="color: rgb(148, 147, 147); font-size: 16px; font-weight: 600;">00:00-12:00</span>
-                        <span class="speed">30 Мбит/с</span>
+                        <span class="speed" data-i18n="mbitPerS" data-i18n-options='{"number":"30"}'>30 Мбит/с</span>
                     </div>
                 </div>
-                <small style="color: rgb(148, 147, 147); font-size: 16px; font-weight: 500;">до 6-8 устройств</small>
+                <small style="color: rgb(148, 147, 147); font-size: 16px; font-weight: 500;"  data-i18n="devicesCount" data-i18n-options='{"number":"6-8"}'>до 6-8 устройств</small>
 
                 <div class="price">125 000 сум</div>
                 <button class="connect-button">Подключить</button>
@@ -85,32 +86,32 @@
                     <div class="icon-text-group">
                         <img src="images/oi--moon.png" class="moon" alt="Night Icon">
                         <span style="color: rgb(148, 147, 147); font-size: 16px; font-weight: 600;">00:00-12:00</span>
-                        <span class="speed">100 Мбит/с</span>
+                        <span class="speed" data-i18n="mbitPerS" data-i18n-options='{"number":"100"}'>100 Мбит/с</span>
                     </div>
                     <div class="icon-text-group">
                         <img src="images/sun.png" class="sun" alt="Night Icon">
                         <span style="color: rgb(148, 147, 147); font-size: 16px; font-weight: 600;">00:00-12:00</span>
-                        <span class="speed">80 Мбит/с</span>
+                        <span class="speed" data-i18n="mbitPerS" data-i18n-options='{"number":"80"}'>80 Мбит/с</span>
                     </div>
                 </div>
-                <small style="color: rgb(148, 147, 147); font-size: 16px; font-weight: 500;">до 12-15 устройств</small>
+                <small style="color: rgb(148, 147, 147); font-size: 16px; font-weight: 500;"  data-i18n="devicesCount" data-i18n-options='{"number":"12-15"}'>до 12-15 устройств</small>
 
-                <div class="price">200 000 сум</div>
-                <button class="connect-button">Подключить</button>
+                <div class="price" data-i18n="currency" data-i18n-options='{"number":"200"}'>200 000 сум</div>
+                <button class="connect-button" data-i18n="connect">Подключить</button>
             </div>
         </div>
-        <div style="margin-top:80px; margin-bottom: 16px; font-size: 20px; font-weight: 400; color: rgb(29, 28, 28);">
+        <div style="margin-top:80px; margin-bottom: 16px; font-size: 20px; font-weight: 400; color: rgb(29, 28, 28);" data-i18n="fastTariffs" >
             Скоростные тарифы с выгодой
         </div>
         <div class="offer-list">
-            <div style="padding: 8px 16px;">Роутер</div>
-            <div style="padding: 8px 16px;">100 МБит/с</div>
+            <div style="padding: 8px 16px;" data-i18n="router" >Роутер</div>
+            <div style="padding: 8px 16px;" data-i18n="mbitPerS" data-i18n-options='{"number":"100"}'>100 МБит/с</div>
             <div style="padding: 8px 16px; background-color:#2c4c99 ;color: rgb(255, 255, 255); border-radius: 24px;">
                 Cinerama</div>
         </div>
 
     </div>
-
+    <script src="i18n.js"></script>
 </body>
 
 </html>
