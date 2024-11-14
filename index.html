@@ -44,7 +44,7 @@
                                 МБит/с</div>
                             <div style="padding: 8px; color:white">Cinerama</div>
                         </div>
-                        <img onclick="scrollToNext()" style="cursor: pointer;"
+                        <img onclick="goToTariffs()" style="cursor: pointer;"
                             src="./images/fluent--chevron-down-24-regular.png" alt="">
 
                     </div>
@@ -90,9 +90,7 @@
 
     </div>
     <script src="script.js"></script>
-    <script>fetch('tariffs.html').then(response => response.text()).then(html => {
-            document.getElementById('tariff-cards-placeholder').innerHTML = html;
-        })</script>
+
 </body>
 
 </html>
