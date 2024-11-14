@@ -23,24 +23,29 @@
         <section id="home" class="section home">
             <div class="container">
                 <div class="header">
-                    <div style="background-color: white; padding: 16px; border-radius: 50%;">Ru</div>
+                    <div data-i18n="langCode" onclick="changeLanguage()"
+                        style="background-color: white; padding: 16px; border-radius: 50%; cursor: pointer;">Ru</div>
                     <nav>
                         <ul>
-                            <li class="nav-link" data-section="home"><a href="#home">Главная страница</a></li>
-                            <li class="nav-link" data-section="tariffs"><a href="#tariffs">Тарифы</a></li>
+                            <li class="nav-link" data-section="home"><a data-i18n="home" href="#home">Главная
+                                    страница</a></li>
+                            <li class="nav-link" data-section="tariffs"><a data-i18n="tariffs"
+                                    href="#tariffs">Тарифы</a></li>
                             <li class="nav-link" data-section="cinerama"><a href="#cinerama">Cinerama</a></li>
-                            <li class="nav-link" data-section="connect"><a href="#connect">Подключить</a></li>
+                            <li class="nav-link" data-section="connect"><a data-i18n="connect"
+                                    href="#connect">Подключить</a></li>
                         </ul>
                     </nav>
                     <img height="100" src="./images/image-removebg-preview.png" />
                 </div>
                 <div class="banner">
                     <img class="main-page-banner" src="./images/1.png" alt="">
-                    <div style="color: white;font-size: 24px;">За 145 000 сум в месяц вы получаете:</h1>
+                    <div style="color: white;font-size: 24px;" data-i18n="145DollarToMonth">За 145 000 сум в месяц вы
+                        получаете:</h1>
                         <div class="offer-list">
-                            <div style="padding: 8px;color: white;">Роутер</div>
-                            <div style="padding: 8px 12px; background-color: white;color: black; border-radius: 24px;">
-                                100
+                            <div style="padding: 8px;color: white;" data-i18n="router">Роутер</div>
+                            <div style="padding: 8px 12px; background-color: white;color: black; border-radius: 24px;"
+                                data-i18n="100mbit"> 100
                                 МБит/с</div>
                             <div style="padding: 8px; color:white">Cinerama</div>
                         </div>
@@ -59,8 +64,8 @@
         </section>
         <section id="connect-part" class="connect-part">
             <div class="container">
-                <div>Не упусти возможность подключить тариф по выгодным условиям</div>
-                <button onclick="goToConnect()">Подключить</button>
+                <div data-i18n="offer_conditions">Не упусти возможность подключить тариф по выгодным условиям</div>
+                <button onclick="goToConnect()" data-i18n="connect">Подключить</button>
             </div>
         </section>
 
@@ -78,8 +83,8 @@
                 <div class="footer">
                     <div class="container">
                         <div class="flex ">
-                            <button onclick="window.location.href='tel:1132';" class="footer-button">Позвонить</button>
-                            <button class="footer-button">Telegram</button>
+                            <button onclick="window.location.href='tel:1132';" class="footer-button" data-i18n="call">Позвонить</button>
+                            <button onclick="goToBot()" class="footer-button">Telegram</button>
                         </div>
                         <img src="images/image-removebg-preview.png" alt="Turon Telecom Logo" class="logo">
                     </div>
@@ -90,6 +95,8 @@
 
     </div>
     <script src="script.js"></script>
+    <script src="i18n.js"></script>
+
 
 </body>
 

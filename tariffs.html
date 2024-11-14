@@ -14,22 +14,22 @@
         <div class="stats-container">
             <div class="stat-item">
                 <div class="number">4,460</div>
-                <div class="label">Уже подключили</div>
+                <div class="label" data-i18n="already_connected">Уже подключили</div>
             </div>
             <div class="stat-item">
                 <div class="number">145 000 сум</div>
-                <div class="label">Стоимость</div>
+                <div class="label" data-i18n="price">Стоимость</div>
             </div>
             <div class="stat-item">
-                <div class="number">40 Мбит/с</div>
-                <div class="label">Дневная скорость</div>
+                <div class="number" data-i18n="40mbit">40 Мбит/с</div>
+                <div class="label" data-i18n="day_speed">Дневная скорость</div>
             </div>
             <div class="stat-item">
-                <div class="number">100 Мбит/с</div>
-                <div class="label">Ночная скорость</div>
+                <div class="number" data-i18n="100mbit">100 Мбит/с</div>
+                <div class="label" data-i18n="night_speed">Ночная скорость</div>
             </div>
         </div>
-        <h2 style="font-size: 32px; margin-top: 100px; font-weight: 500; color:#2b4993;">Тарифы</h2>
+        <h2 style="font-size: 32px; margin-top: 100px; font-weight: 500; color:#2b4993;" data-i18n="tariffs">Тарифы</h2>
         <div class="background-text">TARIFF</div>
         <div class="cards-container">
             <!-- Card 1 -->
@@ -40,17 +40,17 @@
                     <div class="icon-text-group">
                         <img src="images/oi--moon.png" class="moon" alt="Night Icon">
                         <span style="color: rgb(148, 147, 147); font-size: 16px; font-weight: 600;">00:00-12:00</span>
-                        <span class="speed">100 Мбит/с</span>
+                        <span class="speed" data-i18n="100mbit">100 Мбит/с</span>
                     </div>
                     <div class="icon-text-group">
                         <img src="images/sun.png" class="sun" alt="Night Icon">
                         <span style="color: rgb(148, 147, 147); font-size: 16px; font-weight: 600;">00:00-12:00</span>
-                        <span class="speed">80 Мбит/с</span>
+                        <span class="speed" data-i18n="80mbit">80 Мбит/с</span>
                     </div>
                 </div>
-                <small style="color: rgb(148, 147, 147); font-size: 16px; font-weight: 500;">до 11-12 устройств</small>
+                <small style="color: rgb(148, 147, 147); font-size: 16px; font-weight: 500;" data-i18n="fromTillDevice">до 11-12 устройств</small>
                 <div class="price">185 000 сум</div>
-                <button class="connect-button">Подключить</button>
+                <button class="connect-button" data-i18n="connect">Подключить</button>
             </div>
 
             <!-- Card 2 -->
@@ -62,7 +62,7 @@
                     <div class="icon-text-group">
                         <img src="images/oi--moon.png" class="moon" alt="Night Icon">
                         <span style="color: rgb(148, 147, 147); font-size: 16px; font-weight: 600;">00:00-12:00</span>
-                        <span class="speed">100 Мбит/с</span>
+                        <span class="speed" data-i18n="100mbit">100 Мбит/с</span>
                     </div>
                     <div class="icon-text-group">
                         <img src="images/sun.png" class="sun" alt="Night Icon">
@@ -110,18 +110,6 @@
         </div>
 
     </div>
-    <script>
-        function goToConnect() {
-            // Get the first section height to scroll to the next section
-            const firstSectionHeight = document.getElementById('connect');
-
-            // Scroll to the next section
-            firstSectionHeight.scrollIntoView({
-                block: 'start',
-                behavior: 'smooth' // Smooth scrolling
-            });
-        }
-    </script>
 
 </body>
 

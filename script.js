@@ -51,12 +51,14 @@ document.querySelectorAll('.connect-btn').forEach(button => {
     });
 });
 
-// Log message for the form submission
-document.getElementById('connect-form').addEventListener('submit', (e) => {
-    e.preventDefault();
-    console.log('Form submitted');
-});
 
+function goToBot() {
+    const botUsername = 'turon_tariffs_bot'; // Replace with your bot's actual username (without @ symbol)
+    const telegramUrl = `https://t.me/${botUsername}?start=start`; // Format to open the bot
+    console.log("worked")
+    // Open the Telegram bot in a new tab or window
+    window.open(telegramUrl, '_blank');
+}
 
 // // Optional: Automatically update the active link when scrolling through sections
 // window.addEventListener('scroll', () => {
