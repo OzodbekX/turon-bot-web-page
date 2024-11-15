@@ -157,13 +157,10 @@ function applyTranslations(dictionary) {
 document.addEventListener('DOMContentLoaded', async () => {
   // Check if language is already stored in localStorage, otherwise default to 'uz'
   const currentLang = localStorage.getItem('language132465') || 'uz';
-
   // Load the translations for the current language
   const dictionary = await loadTranslations(currentLang);
-
   // Apply the translations to the page
   applyTranslations(dictionary);
-
   // Set the lang attribute in the <html> element to the current language
   document.documentElement.setAttribute("lang", currentLang);
 });
