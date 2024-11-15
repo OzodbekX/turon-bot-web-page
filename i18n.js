@@ -128,6 +128,7 @@ async function changeLanguage(lang) {
 
   // Save the new language in localStorage
   localStorage.setItem('language132465', newLang);
+  window.location.reload()
 }
 
 function applyTranslations(dictionary) {
