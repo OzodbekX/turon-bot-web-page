@@ -7,17 +7,25 @@
     padding: 20px;
 }
 
-.cinerama-container .cinerama-header  {
+.cinerama-container .cinerama-header {
     display: flex;
     justify-content: center;
     margin: 10px 0 50px;
 }
 
-.cinerama-container .cinerama-banner  {
+.cinerama-container .cinerama-banner {
     display: flex;
     justify-content: center;
     width: 100%;
     margin: 10px 0 50px;
+}
+
+.cinerama-container .cinerama-banner img {
+    @media (max-width:750px) {
+        width: 100%;
+
+    }
+
 }
 
 .cinerama-container .cinerama-content {
@@ -30,18 +38,26 @@
 
 
 
-.cinerama-container .cinerama-subscription  {
-   display: flex;
-   justify-content: space-between;
-   margin-top:70px;
-   width: 100%;
+.cinerama-container .cinerama-subscription {
+    display: flex;
+    justify-content: center;
+    margin-top: 70px;
+    width: 100%;
+    gap: 40px;
+    @media (max-width:750px) {
+        flex-wrap: wrap;
+
+    }
 
 }
 
 .cinerama-container .cinerama-subscription strong {
     font-size: 32px;
     margin: 10px 0;
-    color:#fefe4c ;
+    color: #fefe4c;
+    @media (max-width:750px) {
+        font-size: 28px;
+    }
 }
 
 .cinerama-container .cinerama-series-display {
@@ -60,5 +76,9 @@
     margin-top: 20px;
     line-height: 125%;
     color: #fff;
+    @media (max-width:750px) {
+        margin: 0;
+
+    }
 
 }

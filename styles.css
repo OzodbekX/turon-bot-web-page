@@ -33,8 +33,25 @@
     font-size: 24px;
     width: 100%;
     font-weight: 500;
+
     @media (max-width:750px) {
         font-size: 16px;
+        flex-wrap: wrap;
+        padding: 10px;
+        max-width: 100vw;
+        justify-content: center;
+    }
+}
+
+.header .language {
+    background: white;
+    padding: 16px;
+    border-radius: 50%;
+    cursor: pointer;
+
+    @media (max-width:750px) {
+        font-size: 16px;
+        padding: 10px;
     }
 }
 
@@ -55,18 +72,22 @@ nav .nav-link {
     padding: 16px;
     margin: 0 15px;
     border-radius: 32px;
+
     @media (max-width:750px) {
         padding: 8px;
-        margin: 0;    }
+        margin: 0;
+    }
 }
 
 nav .nav-link.active {
     background-color: white;
 }
-nav .nav-link.active a{
+
+nav .nav-link.active a {
     color: #0033a0;
 }
-a{
+
+a {
     text-decoration: none;
 
 }
@@ -74,7 +95,7 @@ a{
 .main-page-banner {
     margin-top: 40px;
     width: 900px;
-    max-width: 100%;
+    max-width: 100vw;
 }
 
 .offer-list {
@@ -88,20 +109,26 @@ a{
     font-weight: 500;
     display: flex;
     width: fit-content;
-    margin: 16px auto;
-
+    margin: 16px 0;
+    max-width: 100vw;
+    justify-content: center;
+    @media (max-width:750px) {
+        margin-top: 50px;
+    }
 }
 
 
 section {
     text-align: center;
     height: 100vh;
+    max-width: 100vw;
 
 }
 
 .section.home {
     background-color: #254287;
 }
+
 
 .section.cinerama {
     background-color: black;
@@ -134,23 +161,30 @@ button:hover {
     flex-direction: column;
     height: 100%;
     position: relative;
+    @media (max-width:750px) {
+        max-width: 100%;
+        min-width: 400px;
+    }
 }
-.connect-part{
+
+
+
+.connect-part {
     background-color: #3051a0;
     height: 200px;
     width: 100%;
 
 }
-.connect-part .container{
-   flex-direction: row;
-   color: white;
-   align-items: center;
-   justify-content: center;
-   gap:40px;
 
-
+.connect-part .container {
+    flex-direction: row;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
 }
-.connect-part button{
+
+.connect-part button {
     background-color: white;
     height: min-content;
     padding: 16px 24px;
@@ -160,23 +194,26 @@ button:hover {
 }
 
 
- .footer {
+.footer {
     width: 100%;
     background-color: #3051a0;
     margin-top: 20px;
 }
-.footer .container{
+
+.footer .container {
     display: flex;
     justify-content: space-between;
     height: 200px;
     flex-direction: row;
     align-items: center;
 }
-.flex{
-display: flex;
-gap: 24px;
+
+.flex {
+    display: flex;
+    gap: 24px;
 }
- .footer .footer-button {
+
+.footer .footer-button {
     background-color: white;
     border: 1px solid #ddd;
     color: black;
@@ -187,10 +224,10 @@ gap: 24px;
     transition: background-color 0.3s ease;
 }
 
- .footer .footer-button:hover {
+.footer .footer-button:hover {
     background-color: #eee;
 }
 
- .footer .logo {
+.footer .logo {
     height: 80px;
 }

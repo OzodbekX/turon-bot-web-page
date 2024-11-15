@@ -23,8 +23,7 @@
         <section id="home" class="section home">
             <div class="container">
                 <div class="header">
-                    <div data-i18n="langCode" onclick="changeLanguage()"
-                        style="background-color: white; padding: 16px; border-radius: 50%; cursor: pointer;">Ru</div>
+                    <div data-i18n="langCode" onclick="changeLanguage()" class="language">Ru</div>
                     <nav>
                         <ul>
                             <li class="nav-link" data-section="home"><a data-i18n="home" href="#home">Главная
@@ -38,22 +37,23 @@
                     </nav>
                     <img height="100" src="./images/image-removebg-preview.png" />
                 </div>
-                <div style="width: 100%;">
+                <div style="width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; max-width: 100vw; flex: 1;">
                     <img class="main-page-banner" src="./images/1.png" alt="">
-                    <div style="color: white;font-size: 24px;" data-i18n="145DollarToMonth">За 145 000 сум в месяц вы
-                        получаете:</h1>
-                        <div class="offer-list">
-                            <div style="padding: 8px;color: white;" data-i18n="router">Роутер</div>
-                            <div style="padding: 8px 12px; background-color: white;color: black; border-radius: 24px;"
+                    <div style="color: white;font-size: 24px; max-width: 100vw;" data-i18n="145DollarToMonth">За 145 000
+                        сум в месяц вы
+                        получаете:</div>
+                    <div class="offer-list">
+                        <div style="padding: 8px;color: white;" data-i18n="router">Роутер</div>
+                        <div style="padding: 8px 12px; background-color: white;color: black; border-radius: 24px;"
                             data-i18n="mbitPerS" data-i18n-options='{"number":"100"}'> 100
-                                МБит/с</div>
-                            <div style="padding: 8px; color:white">Cinerama</div>
-                        </div>
-                        <img onclick="goToTariffs()" style="cursor: pointer;"
-                            src="./images/fluent--chevron-down-24-regular.png" alt="">
-
+                            МБит/с</div>
+                        <div style="padding: 8px; color:white">Cinerama</div>
                     </div>
+                    <img onclick="goToTariffs()" style="cursor: pointer; margin-top: auto;"
+                        src="./images/fluent--chevron-down-24-regular.png" alt="">
+
                 </div>
+            </div>
         </section>
 
         <!-- Tariffs Section -->
@@ -65,7 +65,7 @@
         <section id="connect-part" class="connect-part">
             <div class="container">
                 <div data-i18n="offer_conditions">Не упусти возможность подключить тариф по выгодным условиям</div>
-                <button onclick="goToConnect()" data-i18n="connect">Подключить</button>
+                <button style="margin-right: 16px;" onclick="goToConnect()" data-i18n="connect">Подключить</button>
             </div>
         </section>
 
@@ -82,8 +82,9 @@
             <footer>
                 <div class="footer">
                     <div class="container">
-                        <div class="flex ">
-                            <button onclick="window.location.href='tel:1132';" class="footer-button" data-i18n="call">Позвонить</button>
+                        <div class="flex" style="padding: 0 10px;">
+                            <button onclick="window.location.href='tel:1132';" class="footer-button"
+                                data-i18n="call">Позвонить</button>
                             <button onclick="goToBot()" class="footer-button">Telegram</button>
                         </div>
                         <img src="images/image-removebg-preview.png" alt="Turon Telecom Logo" class="logo">
