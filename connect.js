@@ -3,7 +3,7 @@ window.addEventListener("message", function (event) {
     const data = event.data;
     if (data.action === "goToConnect") {
         const elementId = data.elementId;
-        const tariff = document.getElementById('tariff');
+        const tariff = document.getElementById('tariff-select');
         tariff.value = elementId;
     }
 });
@@ -28,11 +28,12 @@ document.getElementById('requestForm').addEventListener('submit', function (even
 
     const phoneRegex = /^(?:\+998\d{9}|9\d{8}|9989\d{8})$/;
     if (!phoneRegex.test(phoneInput)) {
-        alert("Пожалуйста, введите действительный номер телефона.");
-    }else{
+        const phoneError = document.getElementById('phoneError');
+        phoneError.style.display = "flex";
+        }else{
         const fullname = document.getElementById('fullname').value;
         const number = document.getElementById('number').value;
-        const tariff = document.getElementById('tariff').value;
+        const tariff = document.getElementById('tariff-select').value;
         const tariffs = {
             tezkor: "Tezkor",
             barqaror: "Barqaror",

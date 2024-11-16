@@ -3,6 +3,7 @@ const translations = {
   ru: {
     "home": "Главная страница",
     "tariffs": "Тарифы",
+    "tariff": "Тариф",
     "cinerama": "Cinerama",
     "connect": "Подключить",
     "already_connected": "Уже подключили",
@@ -31,12 +32,14 @@ const translations = {
     "mbitPerS": "{{number}} Мбит/с",
     "currency": "{{number}} сум",
     "devicesCount": "до {{number}} устройств",
+    "enterValidPhoneNumber": "Пожалуйста, введите действительный номер телефона.",
     "145DollarToMonth": "За 145 000 сум в месяц вы получаете",
     "fill_form": "Заполняя форму заявки на сайте, вы соглашаетесь с условиями публичной оферты и даете согласие на обработку ваших персональных данных в соответствии с действующим законодательством. Ваши данные будут использоваться исключительно в целях, связанных с оказанием услуг, и не будут переданы третьим лицам без вашего согласия."
   },
   uz: {
     "home": "Bosh sahifa",
     "tariffs": "Tariflar",
+    "tariff": "Tariflar",
     "cinerama": "Cinerama",
     "connect": "Ulanish",
     "already_connected": "Allaqachon ulangan",
@@ -65,12 +68,14 @@ const translations = {
     "mbitPerS": "{{number}} MBit/s",
     "currency": "{{number}} so'm",
     "devicesCount": "{{number}} qurilmalar",
+    "enterValidPhoneNumber": "Iltimos telefon raqamini to'g'ri kiriting",
     "145DollarToMonth": "Oyiga 145 000 so'm evaziga siz quyidagilarga ega bo'lasiz",
     "fill_form": "Saytda ariza formasini to'ldirish orqali siz jamoatchilik taklifining shartlari bilan tanishganligingizni tasdiqlaysiz va shaxsiy ma'lumotlaringizni amaldagi qonunchilikka muvofiq qayta ishlashga rozilik bildirasiz. Sizning ma'lumotlaringiz faqat xizmatlar ko'rsatish bilan bog'liq maqsadlarda ishlatiladi va uchinchi shaxslarga sizning roziligingizsiz uzatilmaydi."
   },
   en: {
     "home": "Home page",
     "tariffs": "Tariffs",
+    "tariff": "Tariffs",
     "cinerama": "Cinerama",
     "connect": "Connect",
     "already_connected": "Already connected",
@@ -99,6 +104,7 @@ const translations = {
     "mbitPerS": "{{number}} Mbps",
     "currency": "{{number}} sum",
     "devicesCount": "up to {{number}} devices",
+    "enterValidPhoneNumber": "Please enter a valid phone number.",
     "145DollarToMonth": "For 145,000 sum per month, you get the following",
     "fill_form": "By filling out the application form on the website, you agree to the terms of the public offer and consent to the processing of your personal data in accordance with applicable legislation. Your data will be used exclusively for service-related purposes and will not be transferred to third parties without your consent."
 
@@ -151,6 +157,12 @@ function applyTranslations(dictionary) {
     } else {
       element.textContent = translatedText;
     }
+    if (element.hasAttribute('placeholder')) {
+      console.log("worked");      
+      const placeholderKey = `${key}`; // Use a separate key for placeholders
+      const translatedPlaceholder = dictionary[placeholderKey] || element.getAttribute('placeholder');
+      element.setAttribute('placeholder', translatedPlaceholder);
+    }
   });
 }
 
@@ -164,5 +176,3 @@ document.addEventListener('DOMContentLoaded', async () => {
   // Set the lang attribute in the <html> element to the current language
   document.documentElement.setAttribute("lang", currentLang);
 });
-
-// Set default language
