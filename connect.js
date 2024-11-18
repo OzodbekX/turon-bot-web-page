@@ -30,7 +30,9 @@ document.getElementById('requestForm').addEventListener('submit', function (even
     if (!phoneRegex.test(phoneInput)) {
         const phoneError = document.getElementById('phoneError');
         phoneError.style.display = "flex";
-        phoneError.style.position = "relative";
+        if(window.innerWidth<750){
+            phoneError.style.position = "relative";
+        }
         }else{
         const fullname = document.getElementById('fullname');
         const number = document.getElementById('number');
