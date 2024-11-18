@@ -162,7 +162,6 @@ function applyTranslations(dictionary) {
             element.textContent = translatedText;
         }
         if (element.hasAttribute('placeholder')) {
-            console.log("worked");
             const placeholderKey = `${key}`; // Use a separate key for placeholders
             const translatedPlaceholder = dictionary[placeholderKey] || element.getAttribute('placeholder');
             element.setAttribute('placeholder', translatedPlaceholder);

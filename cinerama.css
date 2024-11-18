@@ -1,26 +1,30 @@
+body{
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+}
 .cinerama-container {
     font-family: Arial, sans-serif;
     background-color: #000;
     color: #fff;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: calc(100vw - 40px);
+    justify-content: center;}
 
 .cinerama-container .cinerama-header {
     display: flex;
     justify-content: center;
-    margin: 10px 0 50px;
-    @media (max-width:750px) {
-        margin: 0 0 10px;
-    }
+    margin: 40px 0;
 }
 
 .cinerama-container .cinerama-banner {
     display: flex;
     justify-content: center;
     width: 100%;
-    margin: 10px 0 50px;
+    margin: 10px 0;
 }
 
 .cinerama-container .cinerama-banner img {
@@ -35,7 +39,9 @@
     text-align: center;
     margin-top: 20px;
     display: flex;
+    flex-grow: 1;
     flex-direction: column;
+    justify-content: space-between;
 }
 
 
@@ -44,9 +50,9 @@
 .cinerama-container .cinerama-subscription {
     display: flex;
     justify-content: center;
-    margin-top: 70px;
     width: 100%;
     gap: 40px;
+    margin: 40px 0;
     @media (max-width:750px) {
         flex-wrap: wrap;
         margin-top: 20px;
@@ -76,13 +82,8 @@
 .cinerama-container .cinerama-description p {
     font-size: 18px;
     text-align: center;
-    margin: 0 100px;
-    margin-top: 20px;
+    margin:20px  0 100px;
     line-height: 125%;
     color: #fff;
-    @media (max-width:750px) {
-        margin: 0;
-
-    }
 
 }

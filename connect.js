@@ -31,15 +31,15 @@ document.getElementById('requestForm').addEventListener('submit', function (even
         const phoneError = document.getElementById('phoneError');
         phoneError.style.display = "flex";
         }else{
-        const fullname = document.getElementById('fullname').value;
-        const number = document.getElementById('number').value;
+        const fullname = document.getElementById('fullname');
+        const number = document.getElementById('number');
         const tariff = document.getElementById('tariff-select').value;
         const tariffs = {
             tezkor: "Tezkor",
             barqaror: "Barqaror",
             checksiz: "Checksiz"
         }
-        const message = `Дата подачи заявления: ${getFormattedDate()}\n Имя: ${fullname}\n Телефон: ${number}\n Язык: ${localStorage.getItem('language132465')||'uz'} \n Тариф: ${tariffs?.[tariff]}`
+        const message = `Дата подачи заявления: ${getFormattedDate()}\n Имя: ${fullname.value}\n Телефон: ${number.value}\n Язык: ${localStorage.getItem('language132465')||'uz'} \n Тариф: ${tariffs?.[tariff]}`
         const token = '7128849436:AAE6uhEK6_kViChviOAkfr-NNlAcCEx5wiU'
 
         fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
@@ -56,6 +56,8 @@ document.getElementById('requestForm').addEventListener('submit', function (even
                     fullname.value = "";
                     number.value = "";
                     const phoneSuccess = document.getElementById('alert-sentSuccess');
+                    const phoneError = document.getElementById('phoneError');
+                    phoneError.style.display = "none";
                     phoneSuccess.style.display = "flex";
                     setTimeout(function () {
                         phoneSuccess.style.display = "none";

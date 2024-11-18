@@ -89,7 +89,7 @@
 
 .cards-container-wrapper .tariffs-title {
     font-size: 32px;
-    margin-top: 100px;
+    margin-top: 40px;
     color: #2b4993;
     font-weight: 500;
     @media (max-width:750px) {
@@ -111,6 +111,7 @@
         flex-wrap: wrap;
         margin-top: 10px;
         gap:16px;
+        height: fit-content;
 
     }
 }

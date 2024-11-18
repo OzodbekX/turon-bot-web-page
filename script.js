@@ -29,6 +29,27 @@ function scrollToParentElement(elementId) {
     localStorage.setItem("selectTariffId", elementId)
 }
 
+function onLoadFrame(iframeId, sectionId, contentId, minHeight) {
+    const iframe = document.getElementById(iframeId);
+    try {
+        // Access the iframe's document
+        const iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
+        // Find the target element in the iframe
+        const targetElement = iframeDocument.querySelector(`#${contentId}`); // Replace with the desired element selector
+        if (targetElement) {
+            // Get the height of the target element
+            const elementHeight = targetElement.offsetHeight;
+            // Set the height of the section
+            const section = document.getElementById(sectionId);
+            section.style.height = elementHeight + 16 + 'px';
+            section.style.minHeight = minHeight || (elementHeight + 16 + 'px');
+            iframe.style.height = elementHeight + 16 + 'px';
+        }
+    } catch (error) {
+        console.error('Error accessing iframe content:', error);
+    }
+}
+
 window.addEventListener("message", function (event) {
     const data = event.data;
     if (data.action === "goToConnect") {

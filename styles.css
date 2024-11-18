@@ -42,6 +42,15 @@
         justify-content: center;
     }
 }
+.logo-and-lang{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width:min-content;
+    @media (max-width:750px) {
+        width: 100%;
+    }
+}
 .small-logo{
     display: none;
     @media (max-width:750px) {
@@ -109,7 +118,10 @@ a {
 .main-page-banner {
     margin-top: 40px;
     width: 900px;
-    max-width: 100vw;
+    max-width: calc(100vw - 600px);
+    @media (max-width:750px) {
+        max-width: calc(100vw - 50px);
+    }
 }
 
 .offer-list {
@@ -123,8 +135,9 @@ a {
     font-weight: 500;
     display: flex;
     width: fit-content;
-    margin: 16px 0;
+    margin: auto 0 16px 0;
     max-width: 100vw;
+
     justify-content: center;
     @media (max-width:750px) {
         margin-top: 50px;
@@ -146,12 +159,7 @@ section {
 
 .section.cinerama {
     background-color: black;
-}
-
-.section.tariff {
-    @media (max-width:750px) {
-        height: 1550px;
-    }
+    min-height: 100vh;
 }
 
 
