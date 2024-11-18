@@ -23,7 +23,11 @@
         <section id="home" class="section home">
             <div class="container">
                 <div class="header">
-                    <div data-i18n="langCode" onclick="changeLanguage()" class="language">Ru</div>
+                    <div style="display: flex; justify-content: space-between; align-items: center;flex-grow: 1;">
+                        <div data-i18n="langCode" onclick="changeLanguage()" class="language">Ru</div>
+                        <img class="small-logo" height="70" src="./images/image-removebg-preview.png" />
+
+                    </div>
                     <nav>
                         <ul>
                             <li class="nav-link" data-section="home"><a data-i18n="home" href="#home">Главная
@@ -35,7 +39,7 @@
                                     href="#connect">Подключить</a></li>
                         </ul>
                     </nav>
-                    <img height="100" src="./images/image-removebg-preview.png" />
+                    <img class="big-logo" height="100" src="./images/image-removebg-preview.png" />
                 </div>
                 <div style="width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; max-width: 100vw; flex: 1;">
                     <img class="main-page-banner" src="./images/1.png" alt="">
@@ -57,14 +61,14 @@
         </section>
 
         <!-- Tariffs Section -->
-        <section id="tariffs" class="section">
+        <section id="tariffs" class="section tariff">
             <div class="container">
-                <iframe src="tariffs.html" width="100%" height="100%" style="border: none;"></iframe>
+                <iframe src="tariffs.html" width="100%" height="100%" class="tariff-frame" style="border: none;"></iframe>
             </div>
         </section>
         <section id="connect-part" class="connect-part">
             <div class="container">
-                <div data-i18n="offer_conditions">Не упусти возможность подключить тариф по выгодным условиям</div>
+                <div data-i18n="offer_conditions" >Не упусти возможность подключить тариф по выгодным условиям</div>
                 <button style="margin-right: 16px;" onclick="goToConnect()" data-i18n="connect">Подключить</button>
             </div>
         </section>
@@ -75,9 +79,9 @@
                 <iframe src="cinerama.html" width="100%" height="100%" style="border: none;"></iframe>
             </div>
         </section>
-        <section id="connect" class="section">
+        <section id="connect" class="section connect">
             <div class="container">
-                <iframe src="connect.html" width="100%" height="100%" style="border: none;"></iframe>
+                <iframe id="connectFrame" src="connect.html" width="100%" height="100%" style="border: none;"></iframe>
             </div>
             <footer>
                 <div class="footer">
