@@ -39,10 +39,8 @@ function onLoadFrame(iframeId, sectionId, contentId, minHeight) {
         if (targetElement) {
             // Get the height of the target element
             const elementHeight = targetElement.offsetHeight;
-
             // Set the height of the section
             const section = document.getElementById(sectionId);
-            console.log(iframe,minHeight);
             section.style.height = elementHeight + 16 + 'px';
             section.style.minHeight = minHeight || (elementHeight + 16 + 'px');
             iframe.style.height = elementHeight + 16 + 'px';
