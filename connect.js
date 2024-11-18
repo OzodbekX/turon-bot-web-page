@@ -39,21 +39,28 @@ document.getElementById('requestForm').addEventListener('submit', function (even
             barqaror: "Barqaror",
             checksiz: "Checksiz"
         }
-        const message = `Дата подачи заявления: ${getFormattedDate()}\n Имя: ${fullname}\n Телефон: ${number}\n Язык: ${localStorage.getItem('language132465')} \n Тариф: ${tariffs?.[tariff]}`
+        const message = `Дата подачи заявления: ${getFormattedDate()}\n Имя: ${fullname}\n Телефон: ${number}\n Язык: ${localStorage.getItem('language132465')||'uz'} \n Тариф: ${tariffs?.[tariff]}`
         const token = '7128849436:AAE6uhEK6_kViChviOAkfr-NNlAcCEx5wiU'
-        // Send request to server
+
         fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
-                chat_id: "5129468790",
+                chat_id: "-1002470054641",
                 text: message
             })
         })
             .then(response => response.json())
             .then(data => {
                 if (data.ok) {
-                    alert("Message sent successfully:");
+                    fullname.value = "";
+                    number.value = "";
+                    const phoneSuccess = document.getElementById('alert-sentSuccess');
+                    phoneSuccess.style.display = "flex";
+                    setTimeout(function () {
+                        phoneSuccess.style.display = "none";
+
+                    },3000)
                 }
             })
             .catch(error => {
