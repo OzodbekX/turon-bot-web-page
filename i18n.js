@@ -31,7 +31,7 @@ const translations = {
         "mbitPerS": "{{number}} Мбит/с",
         "currency": "{{number}} сум",
         "devicesCount": "до {{number}} устройств",
-        "enterValidPhoneNumber": "Пожалуйста, введите действительный номер телефона.",
+        "enterValidPhoneNumber": "Неправильный номер телефона",
         "145DollarToMonth": "За 145 000 сум в месяц вы получаете",
         "fill_form": "Заполняя форму заявки на сайте, вы соглашаетесь с условиями публичной оферты и даете согласие на обработку ваших персональных данных в соответствии с действующим законодательством. Ваши данные будут использоваться исключительно в целях, связанных с оказанием услуг, и не будут переданы третьим лицам без вашего согласия.",
         "sentMessage": "Сообщение успешно отправлено"
@@ -69,7 +69,7 @@ const translations = {
         "mbitPerS": "{{number}} MBit/s",
         "currency": "{{number}} so'm",
         "devicesCount": "{{number}} qurilmalar",
-        "enterValidPhoneNumber": "Iltimos telefon raqamini to'g'ri kiriting",
+        "enterValidPhoneNumber": "Noto’g’ri telefon raqam",
         "145DollarToMonth": "Oyiga 145 000 so'm evaziga siz quyidagilarga ega bo'lasiz",
         "fill_form": "Saytda ariza formasini to'ldirish orqali siz jamoatchilik taklifining shartlari bilan tanishganligingizni tasdiqlaysiz va shaxsiy ma'lumotlaringizni amaldagi qonunchilikka muvofiq qayta ishlashga rozilik bildirasiz. Sizning ma'lumotlaringiz faqat xizmatlar ko'rsatish bilan bog'liq maqsadlarda ishlatiladi va uchinchi shaxslarga sizning roziligingizsiz uzatilmaydi.",
         "sentMessage": "Xabar muvaffaqiyatli yuborildi"
@@ -107,7 +107,7 @@ const translations = {
         "mbitPerS": "{{number}} Mbps",
         "currency": "{{number}} sum",
         "devicesCount": "up to {{number}} devices",
-        "enterValidPhoneNumber": "Please enter a valid phone number.",
+        "enterValidPhoneNumber": "Incorrect phone number",
         "145DollarToMonth": "For 145,000 sum per month, you get the following",
         "fill_form": "By filling out the application form on the website, you agree to the terms of the public offer and consent to the processing of your personal data in accordance with applicable legislation. Your data will be used exclusively for service-related purposes and will not be transferred to third parties without your consent.",
         "sentMessage": "Message sent successfully"
