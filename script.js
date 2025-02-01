@@ -86,7 +86,7 @@ document.querySelectorAll('.connect-btn').forEach(button => {
 
 
 function goToBot() {
-    const telegramUrl = `https://t.me/turontelecomchannel`; // Format to open the bot
+    const telegramUrl = `https://t.me/telecomturon`; // Format to open the bot
     window.open(telegramUrl, '_blank');
 }
 
